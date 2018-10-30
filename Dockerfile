@@ -1,7 +1,7 @@
 FROM fedora:latest
 
-LABEL "com.redhat.component"="hello-osbs" \
-      "name"="athos-ribeiro/hello-osbs" \
+LABEL "com.redhat.component"="hello-osbs2" \
+      "name"="athos-ribeiro/hello-osbs2" \
       "version"="1.0"
 
-RUN sleep 300
+RUN echo hello osbs
