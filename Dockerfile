@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM athos/tt
 
 LABEL "com.redhat.component"="hello-osbs" \
       "name"="athos-ribeiro/hello-osbs" \
