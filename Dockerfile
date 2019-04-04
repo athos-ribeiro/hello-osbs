@@ -1,9 +1,9 @@
-FROM fedora:latest
+FROM buildroot
 
-LABEL "com.redhat.component"="hello-osbs" \
-      "name"="athos-ribeiro/hello-osbs" \
-      "com.redhat.delivery.appregistry"="true" \
-      "version"="1.0"
+LABEL name=athos-ribeiro/hello-osbs
+LABEL version=1.0
+LABEL com.redhat.component=hello-osbs
 
-RUN mkdir /manifests && echo foo > /manifests/stub
-RUN mkdir /manifests/another && echo êéão > /manifests/another/stub2
+RUN yum-config-manager --enable rhel-7-server-extras-rpms && yum -y install buildah
+
+CMD ["atomic-reactor", "--verbose", "inside-build", "--input", "osv3"]
