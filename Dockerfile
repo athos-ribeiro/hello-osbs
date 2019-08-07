@@ -1,4 +1,4 @@
-FROM athos-ribeiro/hello-osbs:latest
+FROM athos-ribeiro/hello-osbs:1.0-1
 
 LABEL "com.redhat.component"="hello-osbs" \
       "name"="athos-ribeiro/hello-osbs" \
