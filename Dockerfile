@@ -1,4 +1,4 @@
-FROM athos-ribeiro/hello-osbs
+FROM athos-ribeiro/hello-osbs:external
 
 LABEL "com.redhat.component"="hello-osbs-child" \
       "name"="athos-ribeiro/hello-osbs-child" \
