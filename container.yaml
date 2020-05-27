@@ -4,3 +4,5 @@ go:
     - module: example.com/go/anotherpackage
       archive: anotherpackage.tar.gz
       path: anotherpackage-v0.54.1
+autorebuild:
+  ignore_isolated_builds: True
