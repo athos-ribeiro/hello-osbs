@@ -5,6 +5,7 @@ LABEL "com.redhat.component"="hello-osbs" \
       "com.redhat.delivery.appregistry"="true" \
       "version"="1.0"
 
-RUN dnf install -y vim git
-RUN mkdir /manifests && echo foo > /manifests/stub
-RUN mkdir /manifests/another && echo êéão > /manifests/another/stub2
+RUN dnf install -y golang
+COPY $REMOTE_SOURCE $REMOTE_SOURCE_DIR
+WORKDIR $REMOTE_SOURCE_DIR/app
+RUN go build -o retrodep
