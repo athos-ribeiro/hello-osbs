@@ -1,6 +1,0 @@
-go:
-  modules:
-    - module: example.com/go/packagename
-    - module: example.com/go/anotherpackage
-      archive: anotherpackage.tar.gz
-      path: anotherpackage-v0.54.1
